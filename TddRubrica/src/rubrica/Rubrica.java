@@ -51,4 +51,18 @@ public class Rubrica {
 		return v;
 	}
 
+	public Voce aggiornaVoce(String nomeVecchio, String cognomeVecchio, String nomeNuovo,
+			String cognomeNuovo, String tel) {
+		
+		Voce v= voci.remove(nomeVecchio+" "+cognomeVecchio);
+		
+		v.setNome(nomeNuovo);
+		v.setCognome(cognomeNuovo);
+		v.setTel(tel);
+		
+		voci.put(nomeNuovo+" "+cognomeNuovo,v);
+		
+		return v;
+	}
+
 }
